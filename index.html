@@ -29,10 +29,19 @@
 
         .footer {
             font-size: 15px;
-            text-align: left;
             color: rgba(0, 0, 0.54);
             line-height: 40px;
             font-family: arial, sans-serif;
+            grid-area: footer;
+        }
+
+        .container {
+            background-color: lightgray;
+            display: grid;
+            grid-template-areas:
+                "header header header header"
+                "content content content content"
+                "footer . . .";
         }
     </style>
 </head>
@@ -49,7 +58,14 @@
         <a
             href="https://www.google.dk/setprefs?sig=0_eSOnblWS2lZXHGi300hyJ-FhfFA%3D&amp;hl=fo&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwjeoLiSyvrpAhVJxosKHbZ2BJQQ2ZgBCBA">Føroyskt</a>
     </p>
-    <footer class="footer">Danmark</footer>
 </body>
+
+<div class="container">
+    <div class="head"></div>
+    <div class="header"></div>
+    <div class="content">
+        </dib>
+        <div class="footer">Danmark</div>
+    </div>
 
 </html>
