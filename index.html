@@ -24,14 +24,40 @@
             font-family: arial, sans-serif;
             color: #222;
             font-size: small;
-            text-align: -webkit-center;
+            /*text-align: -webkit-center;*/
+        }
+
+        .logo {
+            background-color: mediumaquamarine;
+            grid-area: logo;
+            text-align: center;
+        }
+
+        .search {
+            background-color: mediumpurple;
+            grid-area: search;
+            text-align: center;
+        }
+
+        .click {
+            background-color: #5df8d6;
+            grid-area: click;
+            text-align: center;
+        }
+
+        .language {
+            background-color: lightskyblue;
+            grid-area: language;
+            text-align: center;
         }
 
         .footer {
             font-size: 15px;
+            background-color: lightseagreen;
             color: rgba(0, 0, 0.54);
             line-height: 40px;
             font-family: arial, sans-serif;
+            text-align: left;
             grid-area: footer;
         }
 
@@ -40,32 +66,37 @@
             display: grid;
             grid-template-areas:
                 "header header header header"
-                "content content content content"
-                "footer . . .";
+                "logo logo logo logo"
+                "search search search search"
+                "click click click click"
+                "language language language language"
+                "footer footer footer footer";
         }
     </style>
 </head>
 
-<body>
-    <img alt="Google" height="92" id="hplogo"
-        src="https://www.google.dk/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
-        style="padding-top:109px" width="272" data-atf="1">
-    <button class="buttom">Google-søgning</button>
-    <button class="buttom">Jeg prøver lykken</button>
-    <p class="p">Google er tilgængelig på: "
-        <a
-            href="https://www.google.dk/setprefs?sig=0_eSOnblWS2lZXHGi300hyJ-FhfFA%3D&amp;hl=en&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwjeoLiSyvrpAhVJxosKHbZ2BJQQ2ZgBCA8">English</a>
-        <a
-            href="https://www.google.dk/setprefs?sig=0_eSOnblWS2lZXHGi300hyJ-FhfFA%3D&amp;hl=fo&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwjeoLiSyvrpAhVJxosKHbZ2BJQQ2ZgBCBA">Føroyskt</a>
-    </p>
-</body>
-
 <div class="container">
-    <div class="head"></div>
     <div class="header"></div>
-    <div class="content">
+    <div class="logo">
+        <img alt="Google" height="92" id="hplogo"
+            src="https://www.google.dk/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+            style="padding-top:109px" width="272" data-atf="1">
+    </div>
+    <div class="search">SEARCH BAR</div>
+    <div class="click">
+        <button class="buttom">Google-søgning</button>
+        <button class="buttom">Jeg prøver lykken</button>
+    </div>
+    <div class="language">
+        <p class="p">Google er tilgængelig på:
+            <a
+                href="https://www.google.dk/setprefs?sig=0_eSOnblWS2lZXHGi300hyJ-FhfFA%3D&amp;hl=en&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwjeoLiSyvrpAhVJxosKHbZ2BJQQ2ZgBCA8">English</a>
+            <a
+                href="https://www.google.dk/setprefs?sig=0_eSOnblWS2lZXHGi300hyJ-FhfFA%3D&amp;hl=fo&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwjeoLiSyvrpAhVJxosKHbZ2BJQQ2ZgBCBA">Føroyskt</a>
+        </p>
         </dib>
         <div class="footer">Danmark</div>
+        <div class="footer">Annoncering Erhverv Om Sådan fungerer Google Søgning</div>
     </div>
 
 </html>
