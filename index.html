@@ -27,6 +27,18 @@
             /*text-align: -webkit-center;*/
         }
 
+        .searchform {
+            width: 582px;
+            background: #fff;
+            display: flex;
+            border: 1px solid #dfe1e5;
+            box-shadow: none;
+            border-radius: 24px;
+            z-index: 3;
+            height: 44px;
+            margin: 0 auto;
+        }
+
         .logo {
             background-color: mediumaquamarine;
             grid-area: logo;
@@ -82,7 +94,9 @@
             src="https://www.google.dk/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
             style="padding-top:109px" width="272" data-atf="1">
     </div>
-    <div class="search">SEARCH BAR</div>
+    <div class="search">
+        <input class="searchform" type="text" name="search">
+    </div>
     <div class="click">
         <button class="buttom">Google-søgning</button>
         <button class="buttom">Jeg prøver lykken</button>
