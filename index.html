@@ -7,63 +7,39 @@
         body {
             width: 100%;
             height: 100%;
+            background-color: #fff;
+            font-family: arial, sans-serif;
         }
 
-        .buttom {
-            background-color: #f2f2f2;
-            border: 1px solid #f2f2f2;
-            border-radius: 4px;
-            color: #5F6368;
-            font-family: arial, sans-serif;
-            font-size: 14px;
-            margin: 11px 4px;
-            padding: 0 16px;
-            line-height: 27px;
-            height: 36px;
-            min-width: 54px;
+        .container {
+            display: grid;
+            min-height: 100%;
+            grid-template-rows: auto auto auto auto auto 1fr;
+            grid-template-columns: 100hv;
+            grid-template-areas:
+                ". . . navbar"
+                "logo logo logo logo"
+                "search search search search"
+                "click click click click"
+                "language language language language"
+                "footer footer footer footer";
+        }
+
+        .navbar {
+            grid-area: navbar;
+            text-align: right;
+            ;
+        }
+
+        .logo {
+            grid-area: logo;
             text-align: center;
-            cursor: pointer;
-            user-select: none;
         }
 
-        .buttom:hover {
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-            background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
-            background-color: #f8f8f8;
-            border: 1px solid #c6c6c6;
-            color: #222;
-        }
-
-        p {
-            font-family: arial, sans-serif;
-            color: #222;
-            font-size: small;
-            /*text-align: -webkit-center;*/
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 5px;
-            padding: 5px;
-        }
-
-        li {
-            display: inline;
-            padding: 5px;
-
-        }
-
-        .a {
-            color: rgba(0, 0, 0, 0.87);
-            text-decoration: none;
-            font-family: arial, sans-serif;
-            font-size: 13px;
-        }
-
-        .a:hover {
-            color: rgba(0, 0, 0, 0.87);
-            opacity: .85;
-            text-decoration: underline;
+        .search {
+            grid-area: search;
+            text-align: center;
+            margin-bottom: 5px;
         }
 
         .searchform {
@@ -78,48 +54,20 @@
             margin: 0 auto;
         }
 
-        .searchform:hover {
-            box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-            border-color: rgba(223, 225, 229, 0);
-        }
-
-        .navbar {
-            grid-area: navbar;
-            text-align: right;
-            ;
-        }
-
-        .logo {
-            background-color: #fff;
-            grid-area: logo;
-            text-align: center;
-        }
-
-        .search {
-            background-color: #fff;
-            grid-area: search;
-            text-align: center;
-            margin-bottom: 5px;
-        }
-
         .click {
-            background-color: #fff;
             grid-area: click;
             text-align: center;
         }
 
         .language {
-            background-color: #fff;
             grid-area: language;
             text-align: center;
         }
 
         .footer {
             font-size: 15px;
-            background-color: #fff;
             color: rgba(0, 0, 0.54);
             line-height: 40px;
-            font-family: arial, sans-serif;
             text-align: left;
             grid-area: footer;
             display: flex;
@@ -144,19 +92,63 @@
             width: 100%;
         }
 
-        .container {
-            background-color: #fff;
-            display: grid;
-            min-height: 100%;
-            grid-template-rows: auto auto auto auto auto 1fr;
-            grid-template-columns: 100hv;
-            grid-template-areas:
-                ". . . navbar"
-                "logo logo logo logo"
-                "search search search search"
-                "click click click click"
-                "language language language language"
-                "footer footer footer footer";
+        .buttom {
+            background-color: #f2f2f2;
+            border: 1px solid #f2f2f2;
+            border-radius: 4px;
+            color: #5F6368;
+            font-size: 14px;
+            margin: 11px 4px;
+            padding: 0 16px;
+            line-height: 27px;
+            height: 36px;
+            min-width: 54px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .buttom:hover {
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+            background-color: #f8f8f8;
+            border: 1px solid #c6c6c6;
+            color: #222;
+        }
+
+        .a:hover {
+            color: rgba(0, 0, 0, 0.87);
+            opacity: .85;
+            text-decoration: underline;
+        }
+
+
+        .searchform:hover {
+            box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+            border-color: rgba(223, 225, 229, 0);
+        }
+
+        #p {
+            color: #222;
+            font-size: small;
+        }
+
+        #a {
+            color: rgba(0, 0, 0, 0.87);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        #ul {
+            list-style-type: none;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        #li {
+            display: inline;
+            padding: 5px;
+
         }
     </style>
 </head>
@@ -164,13 +156,13 @@
 <body>
     <div class="container">
         <div class="navbar">
-            <ul>
-                <li><a class="a" href="#gmail">Gmail</a></li>
-                <li><a class="a" href="#billeder">Billeder</a></li>
+            <ul id="ul">
+                <li id="li"><a id="a" href="#gmail">Gmail</a></li>
+                <li id="li"><a id="a" href="#billeder">Billeder</a></li>
             </ul>
         </div>
         <div class="logo">
-            <img alt="Google" height="92" id="hplogo"
+            <img alt="Google" height="92"
                 src="https://www.google.dk/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
                 style="padding-top:109px" width="272" data-atf="1">
         </div>
@@ -182,7 +174,7 @@
             <button class="buttom">Jeg prøver lykken</button>
         </div>
         <div class="language">
-            <p class="p">Google er tilgængelig på:
+            <p id="p">Google er tilgængelig på:
                 <a
                     href="https://www.google.dk/setprefs?sig=0_eSOnblWS2lZXHGi300hyJ-FhfFA%3D&amp;hl=en&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwjeoLiSyvrpAhVJxosKHbZ2BJQQ2ZgBCA8">English</a>
                 <a
