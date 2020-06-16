@@ -116,7 +116,7 @@
 
         .footer {
             font-size: 15px;
-            background-color: lightgray;
+            background-color: #fff;
             color: rgba(0, 0, 0.54);
             line-height: 40px;
             font-family: arial, sans-serif;
@@ -124,6 +124,24 @@
             grid-area: footer;
             display: flex;
             align-items: flex-end;
+        }
+
+        .fbar {
+            background: #f2f2f2;
+            color: rgba(0, 0, 0, .54);
+            font-size: 14px;
+            padding-left: 27px;
+            line-height: 40px;
+            min-width: 980px;
+            border-top: 1px solid #e4e4e4;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            position: fixed;
+            z-index: 104;
+            width: 100%;
         }
 
         .container {
@@ -171,8 +189,9 @@
                     href="https://www.google.dk/setprefs?sig=0_eSOnblWS2lZXHGi300hyJ-FhfFA%3D&amp;hl=fo&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwjeoLiSyvrpAhVJxosKHbZ2BJQQ2ZgBCBA">Føroyskt</a>
             </p>
         </div>
-        <div class="footer">Danmark</div>
-        <div class="footer">Annoncering Erhverv Om Sådan fungerer Google Søgning</div>
+        <div class="footer">
+            <div class="fbar">Danmark<br>Annoncering Erhverv Om Sådan fungerer Google Søgning</div>
+        </div>
     </div>
 </body>
 
